@@ -40,7 +40,8 @@ struct LandmarkList: View {
     }
     
     var body: some View {
-        NavigationView {
+        print("#dsohandle4", #dsohandle)
+        return NavigationView {
             List(selection: $selectedLandmark) {
                 ForEach(filteredLandmarks) { landmark in
                     NavigationLink(
@@ -51,6 +52,7 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.large)
             .frame(minWidth: 300)
             .toolbar {
                 ToolbarItem {

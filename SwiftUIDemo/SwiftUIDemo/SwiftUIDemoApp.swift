@@ -18,6 +18,8 @@ struct SwiftUIDemoApp: App {
         
         let mySub = MySubscriber()
         
+        print("#dsohandle1", #dsohandle)
+        
         let mainWindow = WindowGroup {
             ContentView()
                 .environmentObject(modelData)
@@ -93,4 +95,9 @@ class MySubscriber: Subscriber {
     func receive(completion: Subscribers.Completion<Never>) {
         print ("--done--")
     }
+}
+
+@main
+struct SwiftUIDemoApp1 {
+    
 }

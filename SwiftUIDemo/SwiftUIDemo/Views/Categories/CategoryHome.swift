@@ -13,7 +13,8 @@ struct CategoryHome: View {
     @State private var showingProfile = false
     
     var body: some View {
-        NavigationView {
+        print("#dsohandle3", #dsohandle)
+        return NavigationView {
             List {
                 
                 PageView(pages: ModelData()

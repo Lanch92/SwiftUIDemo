@@ -16,7 +16,9 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView(selection: $selection) {
+        
+        print("#dsohandle2", #dsohandle)
+        return TabView(selection: $selection) {
             CategoryHome()
                 .tabItem { Label("Featured", systemImage: "star") }
                 .tag(Tab.featured)
