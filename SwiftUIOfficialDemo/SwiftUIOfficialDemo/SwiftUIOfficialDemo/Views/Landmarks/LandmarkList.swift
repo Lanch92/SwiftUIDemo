@@ -52,7 +52,7 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle(title)
-            .navigationBarTitleDisplayMode(.large)
+//            .navigationBarTitleDisplayMode(.large)
             .frame(minWidth: 300)
             .toolbar {
                 ToolbarItem {

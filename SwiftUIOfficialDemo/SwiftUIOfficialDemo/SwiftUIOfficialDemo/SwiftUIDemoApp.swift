@@ -96,8 +96,3 @@ class MySubscriber: Subscriber {
         print ("--done--")
     }
 }
-
-@main
-struct SwiftUIDemoApp1 {
-    
-}
