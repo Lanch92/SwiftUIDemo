@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isZoomed = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Image("Image")
+            .resizable()
+            .aspectRatio(contentMode: isZoomed ? .fit : .fill)
+            .onTapGesture {
+                withAnimation {
+                    isZoomed.toggle()
+                }
+            }
     }
 }
 
