@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PopupView",
+        "repositoryURL": "https://github.com/exyte/PopupView.git",
+        "state": {
+          "branch": null,
+          "revision": "4cb236c8b8e9de5e93d4ba23354ad64427418935",
+          "version": "0.0.12"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
