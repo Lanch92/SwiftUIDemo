@@ -32,6 +32,18 @@ struct ContentView: View {
             )
             .onAppear {
                 offset = UIScreen.main.bounds.height - 250
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillChangeFrameNotification, object: nil, queue: OperationQueue.current) { noti in
+                    guard let value = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+                    let height = value.height
+                    print(height)
+                    if offset >= UIScreen.main.bounds.height - height {
+                        offset -= height
+                    }
+                }
+                
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: OperationQueue.current) { _ in
+                    offset = UIScreen.main.bounds.height - 250
+                }
             }
             // 放在这里不能拖动是因为 background 也是一个 view
             // 而 drag 是放在 GeometryReader 上
